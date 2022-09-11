@@ -18,8 +18,51 @@ def find_empty(board):
     for i in range(len(board)):
         for j in range(len(board[0])):
             if board[i][j] == 0:
-                return i, j
+                return i, j  # row, col
+    return None
 
+def isValid(board, num, pos):
+
+    # To check row
+    for i in range(len(board[0])):
+        if board[pos[0]][i] == num and pos[1] != i:
+            return False
+
+    # To check column
+    for i in range(len(board[0])):
+        if board[i][pos[1]] == num and pos[0] != i:
+            return False
+
+    # Check each box
+    sub_board_len = int(len(board)**0.5)
+    box_x = pos[1] // sub_board_len 
+    box_y = pos[0] // sub_board_len
+
+    for i in range(box_y * sub_board_len, box_y * sub_board_len + sub_board_len):
+        for j in range(box_x * sub_board_len, box_x * sub_board_len + sub_board_len):
+            if board[i][j] == num and (i, j) != pos:
+                return False
+
+    return True
+
+def solverAlgo(board):
+    
+    find = find_empty(board)
+    if not find:
+        return True
+    else:
+        row, col = find
+    
+    for num in range(1, len(board)+1):
+        if isValid(board, num, (row, col)):
+            board[row][col] = num
+
+            if solverAlgo(board):
+                return True
+
+            board[row][col] = 0
+
+    return False
 
 board =[  
         [0, 0, 0, 0, 0, 0, 2, 0, 0],
