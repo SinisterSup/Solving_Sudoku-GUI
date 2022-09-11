@@ -75,3 +75,8 @@ board =[
         [0, 9, 0, 4, 0, 0, 0, 7, 0],
         [0, 0, 6, 0, 0, 0, 0, 0, 0]
        ] 
+
+print_board(board)
+solverAlgo(board)
+print('=======================')
+print_board(board)
