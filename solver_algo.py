@@ -45,7 +45,7 @@ def isValid(board, num, pos):
 
     return True
 
-def solverAlgo(board):
+def solve(board):
     
     find = find_empty(board)
     if not find:
@@ -57,7 +57,7 @@ def solverAlgo(board):
         if isValid(board, num, (row, col)):
             board[row][col] = num
 
-            if solverAlgo(board):
+            if solve(board):
                 return True
 
             board[row][col] = 0
@@ -79,7 +79,7 @@ if __name__ == '__main__':
        ] 
 
     print_board(board)
-    solverAlgo(board)
+    solve(board)
     print('=======================')
     print_board(board)
 
