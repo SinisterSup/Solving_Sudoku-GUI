@@ -1,5 +1,5 @@
 # Solving_Sudoku-GUI
-![PyGame][1] ![Python][2] ![License][3]
+![Python][1] ![PyGame][2] ![License][3]
 
 #### A Sudoku game with Solver Backtracking algorithm developed using Python and PyGame 
 Every time the program is executed, a random, solvable board is created and the user can attempt to solve it by clicking on the cells.     
@@ -23,3 +23,11 @@ is being applied in order to solve the board.
 ## Run in Gitpod
 You can also alternatively run Sudoku-GUI-Solver in Gitpod, a free online dev environment for GitHub:      
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SinisterSup/Solving_Sudoku-GUI/blob/master/game_GUI_Sudoku.py)
+
+
+
+
+
+[1]: https://img.shields.io/badge/Python-v3.10-informational 
+[2]: https://img.shields.io/badge/PyGame-v2.1.2-green
+[3]: https://img.shields.io/badge/license-MIT-orange
