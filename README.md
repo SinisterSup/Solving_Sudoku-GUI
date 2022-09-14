@@ -22,3 +22,4 @@ is being applied in order to solve the board.
 
 ## Run in Gitpod
 You can also alternatively run Sudoku-GUI-Solver in Gitpod, a free online dev environment for GitHub:
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/SinisterSup/Solving_Sudoku-GUI/blob/master/game_GUI_Sudoku.py)
