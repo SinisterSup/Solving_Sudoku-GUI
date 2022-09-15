@@ -29,7 +29,7 @@ If you want to run the game GUI locally on your machine then you need `python` i
 `python -m pip install pygame` in the command prompt to install the dependency needed.        
 Voila that's all you need!...            
 Now you can just clone the repo remotely on your PC or just download the zip file of this repo wherever on your PC and then just double click on `Sudoku_Game.exe` 
-which is a executable file. This brings up the game window!
+which is an executable file. This brings up the game window!
 ##  Enjoy playing Sudoku
 
 
