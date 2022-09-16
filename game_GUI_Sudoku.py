@@ -21,12 +21,11 @@ def generate():
                     board[i][j] = random.randint(1, 9)  #plug in random number at random spot
                     if isValid(board, board[i][j], (i, j)):
                         continue
-                    board[i][j] = 0
+                    else:
+                        board[i][j] = 0
         partialBoard = deepcopy(board) #copies board without being modified after solve is called
         if solve(board):
             return partialBoard
-
-
 class Board:
     '''A sudoku board made out of Tiles'''
     def __init__(self, window):
@@ -135,8 +134,6 @@ class Board:
 
             elif self.board == self.solvedBoard:
                 return False
-
-
 class Tile:
     '''Represents each white tile/box on the grid'''
     def __init__(self, value, window, x1, y1):

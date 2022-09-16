@@ -1,6 +1,4 @@
 def print_board(board):
-    '''To print the Input and Output Board.'''
-
     sub_board_len = int(len(board)**0.5)
 
     for i in range(len(board)):
@@ -17,8 +15,6 @@ def print_board(board):
                 print(str(board[i][j]) + ' ', end='')
 
 def find_empty(board):
-    '''Checking and returning empty grid coordinates.'''
-
     for i in range(len(board)):
         for j in range(len(board[0])):
             if board[i][j] == 0:
@@ -26,8 +22,7 @@ def find_empty(board):
     return None
 
 def isValid(board, num, pos):
-    '''Validating a particular number on a particular position 
-                of the preset board pattern.'''
+
     # To check row
     for i in range(len(board[0])):
         if board[pos[0]][i] == num and pos[1] != i:
@@ -51,12 +46,12 @@ def isValid(board, num, pos):
     return True
 
 def solve(board):
-    '''Backtracking Algorithm for solving the board.'''
-
+    
     find = find_empty(board)
     if not find:
         return True
-    row, col = find
+    else:
+        row, col = find
     
     for num in range(1, len(board)+1):
         if isValid(board, num, (row, col)):
@@ -71,7 +66,7 @@ def solve(board):
 
 
 if __name__ == '__main__':
-    myBoard =[  
+    board =[  
         [0, 0, 0, 0, 0, 0, 2, 0, 0],
         [0, 8, 0, 0, 0, 7, 0, 9, 0],
         [6, 0, 2, 0, 0, 0, 5, 0, 0],
@@ -83,7 +78,8 @@ if __name__ == '__main__':
         [0, 0, 6, 0, 0, 0, 0, 0, 0]
        ] 
 
-    print_board(myBoard)
-    solve(myBoard)
+    print_board(board)
+    solve(board)
     print('=======================')
-    print_board(myBoard)
+    print_board(board)
+
