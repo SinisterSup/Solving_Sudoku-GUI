@@ -239,7 +239,7 @@ def main():
                     if event.key == pygame.K_9:
                         keyDict[selected] = 9
 
-                    elif event.key == pygame.K_BACKSPACE or event.key == pygame.K_DELETE:  # clears tile out
+                    elif event.key in (pygame.K_BACKSPACE, pygame.K_DELETE):  # clears tile out
                         if selected in keyDict:
                             board.tiles[selected[1]][selected[0]].value = 0
                             del keyDict[selected]
